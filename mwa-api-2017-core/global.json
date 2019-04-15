@@ -1,0 +1,6 @@
+{
+    "projects": [ "ModernStore.Shared", "ModernStore.Domain", "ModernStore.Infra", "ModernStore.Api" ],
+    "sdk": {
+        "version": "1.1.0"
+    }
+}

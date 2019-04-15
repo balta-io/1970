@@ -1,0 +1,19 @@
+<div class="columns is-multiline">
+  <div class="column is-3 animated slideInUp" *ngFor="let product of products">
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="{{ product.image }}" alt="{{ product.title }}">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="content">
+          {{ product.title }}
+          <br>
+          <h1 class="has-text-centered">R$ {{ product.price | number: '1.2-2' }}</h1>
+          <button (click)="addToCart(product)" class="button is-success is-fullwidth"><i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;&nbsp; ADICIONAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
