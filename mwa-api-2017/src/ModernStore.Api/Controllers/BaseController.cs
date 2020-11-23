@@ -16,13 +16,13 @@ namespace ModernStore.Api.Controllers
             _uow = uow;
         }
 
-        public async Task<IActionResult> Response(object result, IEnumerable<Notification> notifications)
+        public new async Task<IActionResult> Response(object result, IEnumerable<Notification> notifications)
         {
             if (!notifications.Any())
             {
                 try
                 {
-                    _uow.Commit();
+                    await _uow.Commit();
                     return Ok(new
                     {
                         success = true,
