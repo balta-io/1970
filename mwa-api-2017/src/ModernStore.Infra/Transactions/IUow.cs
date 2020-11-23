@@ -1,8 +1,10 @@
-﻿namespace ModernStore.Infra.Transactions
+using System.Threading.Tasks;
+
+namespace ModernStore.Infra.Transactions
 {
     public interface IUow
     {
-        void Commit();
+        Task Commit()
         void Rollback();
     }
 }
